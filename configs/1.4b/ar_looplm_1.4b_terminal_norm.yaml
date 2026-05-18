@@ -1,0 +1,4 @@
+base_config: ar_looplm_1.4b_base.yaml
+
+train:
+  output_dir: outputs/ar_looplm_1.4b_terminal_norm

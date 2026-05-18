@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.env
+
+# Outputs
+outputs/
+runs/
+wandb/
+checkpoints/
+*.pt
+*.bin
+*.safetensors
+
+# Logs
+*.log
+job-outputs/
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
+
+# Local config
+.env.local
+*.local.yaml

@@ -1,0 +1,11 @@
+# Norm-sensitive baseline: keep normalized readout, add explicit ||H_k||² penalty
+# Tests whether making the loss norm-sensitive without removing the readout norm
+# is sufficient to prevent drift
+base_config: ar_looplm_full_base.yaml
+
+supervision:
+  mode: terminal
+  norm_penalty_weight: 0.01
+
+train:
+  output_dir: outputs/ar_looplm_full_terminal_norm_penalty

@@ -1,0 +1,8 @@
+base_config: ar_looplm_150m_base.yaml
+
+supervision:
+  mode: terminal
+  norm_penalty_weight: 0.01
+
+train:
+  output_dir: outputs/ar_looplm_150m_terminal_norm_penalty

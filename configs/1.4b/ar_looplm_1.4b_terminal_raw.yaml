@@ -1,0 +1,7 @@
+base_config: ar_looplm_1.4b_base.yaml
+
+model:
+  use_decode_norm: false
+
+train:
+  output_dir: outputs/ar_looplm_1.4b_terminal_raw

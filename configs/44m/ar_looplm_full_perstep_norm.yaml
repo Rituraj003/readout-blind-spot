@@ -1,0 +1,10 @@
+base_config: ar_looplm_full_base.yaml
+
+model:
+  use_decode_norm: true
+
+supervision:
+  mode: per-step
+
+train:
+  output_dir: outputs/ar_looplm_full_perstep_norm

@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "readout-blind-spot"
+version = "0.1.0"
+description = "Code for 'Dense Supervision Is Not Enough: The Readout Blind Spot in Looped Language Models'"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Rituraj Sharma", email = "rituraj@vt.edu" },
+  { name = "Tu Vu",          email = "tuvu@vt.edu" },
+]
+dependencies = [
+  "torch>=2.2",
+  "numpy>=1.26",
+  "datasets>=2.18",
+  "pyyaml>=6.0",
+  "tqdm>=4.66",
+  "matplotlib>=3.8",
+  "scikit-learn>=1.4",
+]
+
+[project.optional-dependencies]
+ouro = [
+  "transformers>=4.40",
+  "accelerate>=0.30",
+  "safetensors>=0.4",
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["*"]

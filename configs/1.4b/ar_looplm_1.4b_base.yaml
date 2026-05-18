@@ -1,0 +1,40 @@
+data:
+  hf_dataset: Salesforce/wikitext
+  hf_name: wikitext-103-raw-v1
+  hf_train_split: train
+  hf_val_split: validation
+  hf_text_field: text
+  hf_cache_dir: .cache/huggingface
+  drop_empty: true
+  join_with: "\n\n"
+  pattern: "\\s+|[A-Za-z0-9_]+|[^\\w\\s]"
+  max_vocab_size: 20000
+  min_token_freq: 2
+  seq_len: 256
+  stride: 128
+
+model:
+  d_model: 2048
+  num_heads: 16
+  num_layers: 20
+  ff_multiplier: 4
+  dropout: 0.1
+  num_loops: 4
+  inter_loop_norm: false
+  use_decode_norm: true
+  tie_weights: true
+
+supervision:
+  mode: terminal
+
+train:
+  output_dir: outputs/ar_looplm_1.4b_base
+  batch_size: 8
+  epochs: 2
+  lr: 0.0002
+  weight_decay: 0.01
+  grad_clip: 1.0
+  seed: 42
+  device: cuda
+  num_workers: 4
+  precision: bf16

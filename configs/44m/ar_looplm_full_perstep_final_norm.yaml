@@ -1,0 +1,15 @@
+# Best of both worlds: raw readout at intermediate loops (loss sees norms),
+# decode_norm only at the final loop (good logit scaling for output).
+# Per-step CE on intermediates constrains norms; final normalized readout
+# gives well-scaled logits for inference.
+base_config: ar_looplm_full_base.yaml
+
+model:
+  use_decode_norm: true
+  decode_norm_final_only: true
+
+supervision:
+  mode: per-step
+
+train:
+  output_dir: outputs/ar_looplm_full_perstep_final_norm

@@ -1,0 +1,10 @@
+base_config: ar_looplm_full_base.yaml
+
+model:
+  use_decode_norm: false
+
+supervision:
+  mode: terminal
+
+train:
+  output_dir: outputs/ar_looplm_full_terminal_raw

@@ -1,0 +1,12 @@
+base_config: ar_looplm_150m_base.yaml
+
+model:
+  use_decode_norm: false
+  decode_norm_final_only: false
+  use_spectral_damping: false
+
+supervision:
+  mode: terminal
+
+train:
+  output_dir: outputs/ar_looplm_150m_terminal_raw
